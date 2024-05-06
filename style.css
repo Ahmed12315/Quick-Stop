@@ -1,0 +1,116 @@
+body{
+    background-color: black;
+    
+}
+.div{
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 20px 35px rgb(53, 52, 52);
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+.div::before{
+    content: "";
+    background-image: conic-gradient(
+        #04b0ee 20deg,
+        transparent 120deg
+    );
+    height: 720px;
+    width: 700px;
+    position: absolute;
+    left: -28%;
+    top: -25%;   
+    animation: animate 6s linear infinite;
+    z-index: 0;
+}
+@keyframes animate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.div:after{
+    content: "";
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 380px;
+    height: 480px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    z-index: 0; 
+}
+.content{
+    position: absolute;
+    inset: 4px;
+    z-index: 2;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #04b0ee;
+    line-height: 8px;
+}
+h2{
+    text-align: center;
+    font-size: 4em;
+    color:  #73c7e5 ;
+}
+.input{
+    text-align: center;
+}
+input{
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px ;
+    color: white;
+    border: 2px solid #73c7e5 ;
+    font-size: 1.2em;
+    background-color: #000000;
+    
+}
+h3{
+    text-align: center;
+    font-size: 2em;
+    color: #5ab1d1;
+}
+.button{
+    display: flex;
+    justify-content:center ;
+    
+}
+#Start{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: #1ebcf5;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#Stop{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: #1ebcf5;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 426px) {
+    .div{
+        width: 350px;
+        height: 450px;
+    }
+    .div:after{
+        width: 335px;
+        height: 435px;
+    }
+}
